@@ -1,10 +1,10 @@
-#!/bin/bash
+>!/bin/bash
 git config --local include.path "../.gitconfig-for-nix"
 
-# setting editor for commits
+> setting editor for commits
 git config --local core.editor nano
 
-# setting anonymous name and email if not configured by user
+> setting anonymous name and email if not configured by user
 GitUserEmail=$(git config --get user.email)
 if [[ "$GitUserEmail" == "" ]]; then
     git config --local user.email "johndoe@example.com"
